@@ -23,7 +23,21 @@ export default function TabLayout() {
           title: 'Parks',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons 
-              name={focused ? 'home' : 'home-outline'} 
+              name={focused ? 'list' : 'list-outline'} 
+              size={24} 
+              color={color} 
+            />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="map"
+        options={{
+          title: 'Map',
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons 
+              name={focused ? 'map' : 'map-outline'} 
               size={24} 
               color={color} 
             />
@@ -45,8 +59,6 @@ export default function TabLayout() {
         }}
       />
 
-      {/* Add Profile tab if you create one */}
-      {/* 
       <Tabs.Screen
         name="profile"
         options={{
@@ -60,7 +72,6 @@ export default function TabLayout() {
           ),
         }}
       />
-      */}
       
     </Tabs>
   );
